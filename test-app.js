@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const src = fs.readFileSync(path.join(__dirname, "site", "docs", "index.html"), "utf8");
+const src = fs.readFileSync(path.join(__dirname, "docs", "index.html"), "utf8");
 const scripts = [...src.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1]);
 
 let fails = 0;
