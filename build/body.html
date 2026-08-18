@@ -1,0 +1,86 @@
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Астрея · мини-апп</p>
+    <h1>Пятьсот гамм на одном экране</h1>
+    <p class="lede">Главный экран приложения в пятистах цветовых сочетаниях. У каждого свой номер — отмечай звёздочкой те, что понравились, внизу соберётся список для отправки. Нижняя панель красится отдельно от экрана: переключи, что именно меняешь.</p>
+  </header>
+
+  <div class="layout">
+    <div class="stage">
+      <div class="phone" id="phone">
+        <div class="screen">
+          <div class="bar"><span>9:41</span><span>▮▮▮</span></div>
+          <div class="head">
+            <p class="day">Воскресенье, 16 августа</p>
+            <p class="name">Твоя карта</p>
+          </div>
+          <div class="wheelbox">
+            <svg class="wheel" viewBox="0 0 320 320" role="img" aria-label="Колесо натальной карты с домами, планетами и аспектами">
+              <g id="wheel-static"></g>
+              <g id="wheel-asp"></g>
+              <g id="wheel-pl"></g>
+            </svg>
+          </div>
+          <div class="chips">
+            <span class="chip">ASC ♈ 8°</span>
+            <span class="chip">☉ ♓ 24°</span>
+            <span class="chip">☽ ♌ 12°</span>
+          </div>
+          <div class="card">
+            <p class="k" id="c-k">Солнце</p>
+            <p class="t" id="c-t">Рыбы 24° · 12 дом</p>
+            <p class="p" id="c-p">Ты считываешь настроение комнаты раньше, чем звучит первое слово. Сила — в этой чуткости, цена — в том, что чужое состояние ты часто носишь как своё.</p>
+          </div>
+          <div class="acts">
+            <button class="btn primary" type="button">Разобрать карту целиком <span class="price">1 ✦</span></button>
+            <button class="btn" type="button">Совместимость с человеком <span class="price">3 ✦</span></button>
+          </div>
+          <div class="nav" id="navbar">
+            <div class="on"><span class="ic">◉</span>Карта</div>
+            <div><span class="ic">☽</span>День</div>
+            <div><span class="ic">✦</span>Вопрос</div>
+            <div><span class="ic">◍</span>Профиль</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="now">
+        <span>Экран: <b id="cur-screen">—</b></span>
+        <span>Панель: <b id="cur-nav">—</b></span>
+        <p class="readout" id="readout"></p>
+      </div>
+
+      <div class="target" role="group" aria-label="Что красит выбор">
+        <button type="button" id="t-screen" aria-pressed="true">Крашу экран</button>
+        <button type="button" id="t-nav" aria-pressed="false">Крашу панель</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="controls">
+        <div class="filters" id="filters"></div>
+        <div class="whites" id="whites" hidden></div>
+        <div class="seek">
+          <input id="seek-input" type="text" inputmode="numeric" placeholder="номер, напр. 137" aria-label="Найти по номеру">
+          <button type="button" id="seek-go">Найти</button>
+          <button type="button" id="seek-clear">Сброс</button>
+        </div>
+        <div class="fav-bar">
+          <p class="lbl">Понравившиеся</p>
+          <p class="list" id="fav-list">пусто — жми звёздочку на карточке</p>
+          <div class="row">
+            <button type="button" id="fav-copy">Скопировать список</button>
+            <button type="button" id="fav-only">Показать только их</button>
+            <button type="button" id="fav-clear">Очистить</button>
+          </div>
+        </div>
+        <p class="count" id="count"></p>
+      </div>
+      <div class="gal" id="gal"></div>
+    </div>
+  </div>
+
+  <footer>
+    Карта построена на демонстрационных данных (15 марта 1995, 08:30, Санкт-Петербург): геометрия колеса настоящая, долготы планет взяты для показа. Все пятьсот сочетаний проверены расчётом контраста — двенадцать пар на каждое.
+  </footer>
+</div>
