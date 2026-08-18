@@ -25,3 +25,9 @@ python build/assemble.py
 ```
 
 Результат — `docs/index.html`. Публикуется через GitHub Pages из папки `/docs`.
+
+# Домен
+
+Витрина живёт на https://palettes.tailung.ru — поддомен указан в `docs/CNAME`.
+На стороне reg.ru стоит запись `CNAME palettes -> qcoldic.github.io.`
+Корневой домен tailung.ru не затронут: у него своя A-запись на другой сервер.
