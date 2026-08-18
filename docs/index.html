@@ -218,7 +218,7 @@ footer { margin-top: 34px; padding-top: 14px; border-top: 1px solid var(--page-l
     display: grid; grid-template-columns: 190px minmax(0, 1fr);
     gap: 12px; align-items: start;
   }
-  .phone { max-width: 190px; padding: 5px; border-radius: 20px; margin: 0; }
+  .phone { max-width: 178px; padding: 5px; border-radius: 20px; margin: 0; }
   .screen { border-radius: 16px; }
   .bar { display: none; }
   .head { padding: 7px 11px 2px; }
@@ -241,7 +241,8 @@ footer { margin-top: 34px; padding-top: 14px; border-top: 1px solid var(--page-l
   .now { font-size: 12px; gap: 4px; margin: 0; }
   .now b { display: block; }
   .readout { font-size: 10.5px; line-height: 1.45; }
-  .target { margin: 10px 0 0; flex-direction: column; gap: 5px; }
+  .now { grid-column: 2; }
+  .target { grid-column: 2; margin: 9px 0 0; flex-direction: column; gap: 5px; }
   .target button { padding: 9px 8px; font-size: 12.5px; }
   .gal { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .pick .nm { font-size: 12.5px; min-height: 2.4em; }
@@ -250,8 +251,8 @@ footer { margin-top: 34px; padding-top: 14px; border-top: 1px solid var(--page-l
   .filters button { font-size: 12.5px; padding: 6px 11px; }
 }
 @media (max-width: 400px) {
-  .stage { grid-template-columns: 165px minmax(0, 1fr); gap: 9px; }
-  .phone { max-width: 165px; }
+  .stage { grid-template-columns: 158px minmax(0, 1fr); gap: 9px; }
+  .phone { max-width: 158px; }
   .now { font-size: 11px; }
   .target button { font-size: 12px; padding: 8px 6px; }
 }
