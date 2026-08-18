@@ -104,7 +104,7 @@ SPECS.forEach((sp, idx) => {
     silver = h2r(hBg, 14, 94);
     silver2 = tune(hBg, 12, ink2, 4.8, true);
     hnum = tune(hBg, 14, ink, 4.7, true);
-    violet = tune(hAcc, 62, nav, 4.8, true);
+    violet = tune(hAcc, 62, ink2, 4.8, true);
     gold = tune(hSec, 55, ink2, 4.8, true);
     if (filled) {
       ink4 = tune(hAcc, 58, ink, 9.0, true);
@@ -118,9 +118,9 @@ SPECS.forEach((sp, idx) => {
     sel = ink4; onSel = onAccent;
   } else {
     ink = h2r(hBg, sBg, lBg);
-    ink2 = cardLighter
-      ? (lBg >= 99 ? h2r(hBg, Math.max(sBg - 4, 2), 96.5) : h2r(hBg, Math.max(sBg - 12, 0), Math.min(lBg + 2.4, 100)))
-      : h2r(hBg, Math.max(sBg - 6, 3), lBg - 3.2);
+    ink2 = (cardLighter && lBg < 96.4)
+      ? h2r(hBg, Math.max(sBg - 12, 0), Math.min(lBg + 3.2, 100))
+      : h2r(hBg, Math.max(sBg - 6, 3), lBg - 4.4);
     ink3 = h2r(hBg, Math.max(sBg - 8, 4), lBg - 8);
     line = tune(hBg, Math.max(sBg - 10, 4), ink, 2.0, false);
     chip = h2r(hBg, Math.max(sBg - 4, 3), lBg - 3);
@@ -128,7 +128,7 @@ SPECS.forEach((sp, idx) => {
     silver = h2r(hBg, 12, 10);
     silver2 = tune(hBg, 10, ink2, 4.8, false);
     hnum = tune(hBg, 10, ink, 4.7, false);
-    violet = tune(hAcc, 68, nav, 4.8, false);
+    violet = tune(hAcc, 68, ink2, 4.8, false);
     gold = tune(hSec, 62, ink2, 4.8, false);
     if (filled) {
       ink4 = tune(hAcc, 55, "#FFFFFF", 5.6, false);
@@ -151,7 +151,8 @@ SPECS.forEach((sp, idx) => {
     ["текст/фон", silver, ink, 7], ["вторичный/карточка", silver2, ink2, 4.5],
     ["дома/фон", hnum, ink, 4.5], ["цена/карточка", gold, ink2, 4.5],
     ["текст кнопки", onAccent, ink4, 4.5], ["цена кнопки", priceOn, ink4, 4.5],
-    ["навигация", silver2, nav, 4.5], ["вкладка", violet, nav, 4.5],
+    ["навигация", silver2, ink2, 4.5], ["вкладка", violet, ink2, 4.5],
+    ["панель отличима от фона", ink2, ink, 1.06],
     ["планета", onSel, sel, 4.5], ["обводка", violet, ink, 3],
     ["линии", line, ink, 1.8], ["карточка/фон", ink2, ink, 1.02]
   ];

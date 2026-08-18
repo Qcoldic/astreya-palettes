@@ -73,10 +73,12 @@
 
   function paintNav(i) {
     var p = PAL[i];
-    navbar.style.setProperty("--nav-bg", p.nav);
+    navbar.style.setProperty("--nav-bg", p.ink2);
     navbar.style.setProperty("--nav-fg", p.silver2);
     navbar.style.setProperty("--nav-acc", p.violet);
-    navbar.style.setProperty("--nav-line", p.ink3);
+    navbar.style.setProperty("--nav-line", p.violet);
+    navbar.style.setProperty("--nav-sel", p.sel);
+    navbar.style.setProperty("--nav-on-sel", p.onSel);
     navIdx = i;
     curNav.textContent = label(i);
   }

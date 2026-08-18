@@ -102,12 +102,16 @@ svg.wheel { display: block; width: 100%; height: auto; }
 .btn.primary .price { color: var(--price-on); }
 .nav {
   display: grid; grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--nav-line, var(--ink-3));
-  background: var(--nav-bg, var(--ink));
+  border-top: 2px solid var(--nav-line, var(--violet));
+  background: var(--nav-bg, var(--ink-2));
 }
-.nav div { text-align: center; padding: 9px 4px 11px; font-size: 12px; color: var(--nav-fg, var(--silver-2)); }
+.nav div { text-align: center; padding: 8px 4px 10px; font-size: 12px; color: var(--nav-fg, var(--silver-2)); }
 .nav div.on { color: var(--nav-acc, var(--violet)); }
 .nav .ic { display: block; font-size: 15px; margin-bottom: 3px; }
+.nav div.on .ic {
+  background: var(--nav-sel, var(--sel)); color: var(--nav-on-sel, var(--on-sel));
+  border-radius: 9px; padding: 2px 12px; margin: 0 auto 3px; width: max-content;
+}
 
 .now {
   display: grid; gap: 6px; margin: 12px 0 0;
@@ -230,8 +234,8 @@ footer { margin-top: 34px; padding-top: 14px; border-top: 1px solid var(--page-l
   .now { font-size: 12px; gap: 4px; margin: 0; }
   .now b { display: block; }
   .readout { font-size: 10.5px; line-height: 1.45; }
-  .now { grid-column: 2; }
-  .target { grid-column: 2; margin: 9px 0 0; flex-direction: column; gap: 5px; }
+  .side { grid-column: 2; grid-row: 1; }
+  .target { margin: 9px 0 0; flex-direction: column; gap: 5px; }
   .target button { padding: 9px 8px; font-size: 12.5px; }
   .gal { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .pick .nm { font-size: 12.5px; min-height: 2.4em; }

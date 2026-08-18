@@ -96,7 +96,7 @@ pickOf(299).click();
 ok(ids["cur-nav"].textContent.startsWith("№300 "), "панель взяла №300", ids["cur-nav"].textContent);
 ok(ids["cur-screen"].textContent.startsWith("№7 "), "экран НЕ изменился при покраске панели");
 ok(JSON.stringify(phone.style.props) === JSON.stringify(screenAfter), "переменные экрана не тронуты");
-ok(navbar.style.props["--nav-bg"] === PAL[299].nav, "фон панели = nav палитры №300");
+ok(navbar.style.props["--nav-bg"] === PAL[299].ink2, "фон панели = поверхность палитры №300");
 ok(navbar.style.props["--nav-acc"] === PAL[299].violet, "акцент панели = violet палитры №300");
 ids["t-screen"].click();
 pickOf(11).click();
